@@ -10,6 +10,18 @@ public class Main {
         input.close();
     }
 
+    public void setInput(Input input) {
+        this.input = input;
+    }
+
+    public void setOutput(Output output) {
+        this.output = output;
+    }
+
+    public void setRandom(RandomInput random) {
+        this.random = random;
+    }
+
     private void play(){
         int result = 0;
 
