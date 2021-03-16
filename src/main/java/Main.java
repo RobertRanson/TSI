@@ -22,7 +22,7 @@ public class Main {
         this.random = random;
     }
 
-    private void play(){
+    protected void play(){
         int result = 0;
 
         output.output("Please guess a random number, enter a larger number to stop");

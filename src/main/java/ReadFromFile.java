@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class ReadFromFile {
 
-    private List<String> readList(String fileName){
+    public List<String> readList(String fileName){
         List<String> rawData = new ArrayList<String>();
         try {
             File file = new File("src/main/resources/" + fileName);
