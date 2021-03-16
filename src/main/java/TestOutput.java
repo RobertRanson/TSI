@@ -2,16 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TestOutput extends Output{
-    private List<String> testOutputs = new ArrayList<String>(10);
-
-    public void setTestOutputs(List<String> outputs){
-        testOutputs = outputs;
-    }
+    protected List<String> testOutputs = new ArrayList<String>(10);
 
     public List<String> getTestOutputs(){
         return testOutputs;
     }
-
 
     public void clear(){
         testOutputs.clear();
@@ -24,4 +19,13 @@ public class TestOutput extends Output{
             testOutputs.add(display);
         }
     }
+
+    public String toString(){
+        String result = "";
+        for (String message : testOutputs){
+            result += message;
+        }
+        return result;
+    }
+
 }

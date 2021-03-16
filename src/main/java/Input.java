@@ -1,3 +1,5 @@
+import java.util.List;
+
 public abstract class Input extends Display{
 
     public abstract String getInputString();
@@ -16,5 +18,9 @@ public abstract class Input extends Display{
         } while (result < 0);
 
         return result;
+    }
+
+    public int getMaxNumber(){
+        return 5;
     }
 }

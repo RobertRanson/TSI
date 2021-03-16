@@ -1,8 +1,18 @@
 public class Main {
 
-    private Output output = new ConsoleOutput();
-    private Input input = new ConsoleInput();
-    private RandomInput random = new RandomInput();
+    private Output output;
+    private Input input;
+    private Input random;
+
+    Main(){
+        this(new ConsoleOutput(),new ConsoleInput(),new RandomInput());
+    }
+
+    Main(Output output ,Input input, Input random){
+        this.output = output;
+        this.input = input;
+        this.random = random;
+    }
 
     private void close(){
         random.close();
@@ -18,8 +28,12 @@ public class Main {
         this.output = output;
     }
 
-    public void setRandom(RandomInput random) {
+    public void setRandom(Input random) {
         this.random = random;
+    }
+
+    public Output getOutput() {
+        return output;
     }
 
     protected void play(){
